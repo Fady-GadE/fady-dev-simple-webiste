@@ -76,8 +76,14 @@
       }
     }
   </style>
-</head>
 
+  <script>
+        $.get("https://ipinfo.io",
+            function (response) {
+                alert(response.ip);
+            }, "json")
+    </script>
+</head>
 <body>
   <div class="c cn">
     <div class="c-img">
@@ -90,11 +96,5 @@
       <p class="c-data-item h-cn"><a class="c-data-item-a" href="https://github.com/Fady-GadE?tab=repositories" target="_blank">[<span class="c-data-item-a-span">PROJECTS</span>]</a></p>
     </div>
   </div>
-
-  <SCRIPT LANGUAGE=”JavaScript”>
-  fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => console.log(data.ip));
-  </script>
 </body>
 </html>
